@@ -1,0 +1,24 @@
+<head>
+  <title>Recipes I Would Like to Keep</title>
+</head>
+
+<template name="input">
+  <div id="input" class="well">
+    <strong>Site address</strong>
+    <input type="text" placeholder="Recipe Name" />
+    <input type="text" placeholder="http://...." />
+    <a id="send">Send</a>
+  </div>
+</template>
+
+<template name ="recipes">
+  <div id="recipes">
+    {{#each recipes}}
+      {{> recipe}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="recipe">
+  <a href="{{recipeaddr}}">{{recipename}}</a>
+</template>
